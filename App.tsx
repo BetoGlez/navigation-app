@@ -1,28 +1,23 @@
 import React from "react";
-import { StyleSheet } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import { SafeAreaProvider } from "react-native-safe-area-context";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Provider } from "react-redux";
+import tw from "tailwind-react-native-classnames";
 
 import store from "./store/config";
 import HomeScreen from "./screens/HomeScreen";
 
-export default function App() {
+const App = () => {
     return (
         <Provider store={store}>
+            <StatusBar style="auto" />
             <SafeAreaProvider>
-                <StatusBar style="auto" />
-                <HomeScreen />
+                <SafeAreaView style={tw`bg-white h-full`}>
+                    <HomeScreen />
+                </SafeAreaView>
             </SafeAreaProvider>
         </Provider>
     );
-}
+};
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: "#fff",
-        alignItems: "center",
-        justifyContent: "center",
-    },
-});
+export default App;

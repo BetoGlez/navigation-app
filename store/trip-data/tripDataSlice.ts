@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 import { TRIP_DATA_INITIAL_STATE } from "./tripData.constants";
-import { AppConstants } from "../../app-config";
+import AppConstants from "../../app-config";
 
 export const tripDataSlice = createSlice({
     name: AppConstants.ReduxSlices.TRIP_DATA_SLICE,

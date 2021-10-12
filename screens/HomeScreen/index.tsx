@@ -1,14 +1,17 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
+import tw from "tailwind-react-native-classnames";
+
+import { homeScreenStyles } from "./HomeScreen.styles";
+import NavOptions from "../../components/NavOptions";
 
 const HomeScreen = () => {
     return (
-        <View>
-            <Text>Home Screen Page</Text>
+        <View style={tw`p-5`}>
+            <Image source={require("../../assets/images/uber-logo.png")} style={homeScreenStyles.uberLogo} />
+            <NavOptions />
         </View>
     );
 };
 
 export default HomeScreen;
-
-const styles = StyleSheet.create({});
