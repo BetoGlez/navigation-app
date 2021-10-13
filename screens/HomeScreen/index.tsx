@@ -7,7 +7,7 @@ import NavOptions from "../../components/NavOptions";
 
 const HomeScreen = () => {
     return (
-        <View style={tw`p-5`}>
+        <View style={tw`px-5`}>
             <Image source={require("../../assets/images/uber-logo.png")} style={homeScreenStyles.uberLogo} />
             <NavOptions />
         </View>

@@ -1,20 +1,24 @@
 import React from "react";
 import { View, Text, ImageSourcePropType, TouchableOpacity, Image } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { Icon } from "react-native-elements";
 import tw from "tailwind-react-native-classnames";
 
 import { navOptionStyles } from "./NavOption.styles";
-import { Icon } from "react-native-elements";
+import { AppScreensStack, ScreenProp } from "../../routes/config";
 
 export interface INavOptionProps {
     id: string;
     title: string;
     image: ImageSourcePropType;
-    screen: string;
+    screen: keyof AppScreensStack;
 };
 
-const NavOption: React.FC<INavOptionProps> = ({title, image}) => {
+const NavOption: React.FC<INavOptionProps> = ({title, image, screen}) => {
+    const navigation = useNavigation<ScreenProp>();
+
     return (
-        <TouchableOpacity style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 rounded`}>
+        <TouchableOpacity onPress={() => navigation.navigate(screen)} style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 rounded`}>
             <View>
                 <Image source={image} style={navOptionStyles.optionImg} />
                 <Text style={tw`mt-2 text-lg font-semibold`}>{title}</Text>
