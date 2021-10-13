@@ -5,7 +5,7 @@ import tw from "tailwind-react-native-classnames";
 import { homeScreenStyles } from "./HomeScreen.styles";
 import NavOptions from "../../components/NavOptions";
 
-const HomeScreen = () => {
+const HomeScreen: React.FC = () => {
     return (
         <View style={tw`px-5`}>
             <Image source={require("../../assets/images/uber-logo.png")} style={homeScreenStyles.uberLogo} />
