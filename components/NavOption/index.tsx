@@ -5,14 +5,14 @@ import { Icon } from "react-native-elements";
 import tw from "tailwind-react-native-classnames";
 
 import { navOptionStyles } from "./NavOption.styles";
-import { AppScreens, HomeScreenNavigation } from "../../routes/config";
+import { RootStackRoutes, HomeScreenNavigation } from "../../routes/root-stack";
 import { useTrip } from "../../hooks/trips/trips-hooks";
 
 export interface INavOptionProps {
     id: string;
     title: string;
     image: ImageSourcePropType;
-    screen: AppScreens;
+    screen: RootStackRoutes;
 };
 
 const NavOption: React.FC<INavOptionProps> = ({title, image, screen}) => {

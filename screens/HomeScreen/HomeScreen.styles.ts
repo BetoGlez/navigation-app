@@ -15,7 +15,6 @@ export const homeScreenStyles = StyleSheet.create({
 export const searchBarStyles: Partial<Styles> = {
     container: {
         flex: 0,
-        paddingHorizontal: 10,
         marginBottom: 16
     },
     textInput: {

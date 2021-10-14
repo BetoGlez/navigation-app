@@ -7,8 +7,8 @@ export type RootStackParamList = {
     Eats: undefined;
 };
 
-// App screens (should match RootStackParamList key names)
-export enum AppScreens {
+// Root screens (should match RootStackParamList key names)
+export enum RootStackRoutes {
     HOME = "Home",
     ROUTE_MAP = "RouteMap",
     EATS = "Eats"
