@@ -13,7 +13,7 @@ const RouteMapScreen: React.FC = () => {
             <View style={tw`h-1/2`}>
                 <NavMap />
             </View>
-            <View style={tw`h-1/2 border border-solid border-gray-500`}>
+            <View style={tw`h-1/2`}>
                 <MapsNavStack.Navigator>
                     <MapsNavStack.Screen name={MapsNavStackRoutes.NAV_CARD} component={NavCard} options={{headerShown: false}} />
                     <MapsNavStack.Screen name={MapsNavStackRoutes.RIDE_OPTS_CARD} component={RideOptionsCard} options={{headerShown: false}} />

@@ -11,5 +11,9 @@ export const useTrip = () => {
         dispatch(setDestinationActionCreator(undefined));
     };
 
-    return { origin, destination, setTripOrigin };
+    const setTripDestination = (place: IPlace) => {
+        dispatch(setDestinationActionCreator(place));
+    };
+
+    return { origin, destination, setTripOrigin, setTripDestination };
 };

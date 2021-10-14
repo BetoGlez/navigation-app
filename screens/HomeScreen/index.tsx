@@ -11,7 +11,7 @@ import NavOptions from "../../components/NavOptions";
 import AppConstants from "../../app-config";
 
 const HomeScreen: React.FC = () => {
-    const {setPlaceData} = useHomeScreen();
+    const { setOriginPlaceData } = useHomeScreen();
 
     return (
         <SafeAreaView style={tw`h-full`}>
@@ -20,7 +20,7 @@ const HomeScreen: React.FC = () => {
                 <GooglePlacesAutocomplete
                     placeholder="Where From?"
                     nearbyPlacesAPI="GooglePlacesSearch"
-                    onPress={(setPlaceData)}
+                    onPress={(setOriginPlaceData)}
                     fetchDetails
                     debounce={AppConstants.SEARCH_PLACES_DEBOUNCE_MS}
                     minLength={AppConstants.SEARCH_PLACES_MIN_CHAR_LENGTH}

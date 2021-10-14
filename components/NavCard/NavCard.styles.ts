@@ -8,7 +8,7 @@ export const whereToSearchBarStyles: Partial<Styles> = {
     },
     textInput: {
         backgroundColor: "#dddddf",
-        fontSize: 18
+        fontSize: 16
     },
     textInputContainer: {
         paddingHorizontal: 20,
