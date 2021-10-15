@@ -8,6 +8,8 @@ import { GOOGLE_MAPS_API_KEY } from "react-native-dotenv";
 import { whereToSearchBarStyles } from "./NavCard.styles";
 import { useNavCard } from "./NavCard";
 import AppConstants from "../../app-config";
+import NavFavourites from "../NavFavourites";
+import { PlaceDestinationTypeEnum } from "../../models/trip.model";
 
 const NavCard: React.FC = () => {
     const { setDestinationPlaceData } = useNavCard();
@@ -29,6 +31,7 @@ const NavCard: React.FC = () => {
                         query={{key: GOOGLE_MAPS_API_KEY, language: "en"}}
                     />
                 </View>
+                <NavFavourites placeType={PlaceDestinationTypeEnum.DESTINATION}/>
             </View>
         </SafeAreaView>
     );

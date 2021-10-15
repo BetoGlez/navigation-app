@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, View } from "react-native";
+import { Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import tw from "tailwind-react-native-classnames";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
@@ -10,6 +10,7 @@ import { useHomeScreen } from "./HomeScreen";
 import NavOptions from "../../components/NavOptions";
 import NavFavourites from "../../components/NavFavourites";
 import AppConstants from "../../app-config";
+import { PlaceDestinationTypeEnum } from "../../models/trip.model";
 
 const HomeScreen: React.FC = () => {
     const { setOriginPlaceData } = useHomeScreen();
@@ -29,7 +30,7 @@ const HomeScreen: React.FC = () => {
                 styles={searchBarStyles}
             />
             <NavOptions />
-            <NavFavourites style={tw`mt-5`}/>
+            <NavFavourites style={tw`mt-5`} placeType={PlaceDestinationTypeEnum.ORIGIN}/>
         </SafeAreaView>
     );
 };

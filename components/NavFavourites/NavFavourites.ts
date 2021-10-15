@@ -1,6 +1,6 @@
-import { INavFavouriteProps } from "../NavFavourite";
+import { IFavouritePlace } from "../../models/trip.model";
 
-export const NAV_FAVOURITES: Array<INavFavouriteProps> = [
+export const NAV_FAVOURITES: Array<IFavouritePlace> = [
     {
         id: "1",
         name: "Home",
