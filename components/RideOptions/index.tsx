@@ -16,7 +16,7 @@ const RideOptions = () => {
                 renderItem={({item}) => <RideOption rideOption={item} selectedRideOptionId={selectedRideOption?.id}
                     distanceDuration={distanceDuration} setSelectedRideOption={setSelectedRideOption}/>}
             />
-            <View>
+            <View style={tw`mt-auto border-t border-gray-200`}>
                 <TouchableOpacity style={tw`bg-black py-3 m-3 rounded ${!selectedRideOption ? "bg-gray-300" : ""}`}
                     disabled={!selectedRideOption}>
                     <Text style={tw`text-center text-white text-lg`}>Choose {selectedRideOption?.title}</Text>
