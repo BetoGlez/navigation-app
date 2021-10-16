@@ -1,3 +1,5 @@
+import { ImageSourcePropType } from "react-native";
+
 import { IPlace } from "./store-data.model";
 
 export enum PlaceDestinationTypeEnum {
@@ -10,4 +12,11 @@ export interface IFavouritePlace {
     name: string;
     icon: string;
     place: IPlace;
-}
+};
+
+export interface IRideOption {
+    id: string;
+    title: string;
+    costMultiplier: number;
+    image: ImageSourcePropType;
+};

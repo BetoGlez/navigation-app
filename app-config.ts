@@ -1,6 +1,8 @@
 import { EdgePadding } from "react-native-maps";
 
 export default class AppConstants {
+    public static readonly LARGE_MIN_DEVICE_SCREEN_HEIGHT = 700;
+
     public static readonly SEARCH_PLACES_DEBOUNCE_MS = 1000;
     public static readonly SEARCH_PLACES_MIN_CHAR_LENGTH = 2;
     public static readonly MAP_INITIAL_REGION_DELTA = 0.005;
