@@ -21,11 +21,11 @@ const RideOption: React.FC<IRideOptionProps> =
             <Image source={image} style={rideOptionStyles.carImg} />
             <View style={tw`-ml-6`}>
                 <Text style={tw`text-lg font-semibold`}>{title}</Text>
-                <Text>{distanceDuration?.duration.text || "Calculating"} Travel Time</Text>
+                <Text>{distanceDuration?.duration?.text || "Calculating"} Travel Time</Text>
             </View>
             <Text style={tw`text-lg`}>
                 {AppConstants.CURRENCY_SYMBOL}
-                {(((distanceDuration?.duration.value || 0) * AppConstants.TRIP_CHARGE_RATE * costMultiplier) / 100).toFixed(2)}
+                {(((distanceDuration?.duration?.value || 0) * AppConstants.TRIP_CHARGE_RATE * costMultiplier) / 100).toFixed(2)}
             </Text>
         </TouchableOpacity>
     );

@@ -18,9 +18,9 @@ const RideOptionsCard: React.FC = () => {
             <View>
                 <TouchableOpacity onPress={() => navigation.goBack()}
                     style={tw`absolute top-0 left-2 z-50 rounded-full`}>
-                    <Icon name="chevron-left" type="fontawesome" />
+                    <Icon name="chevron-left" type="fontawesome" tvParallaxProperties={undefined} />
                 </TouchableOpacity>
-                <Text style={tw`text-center pb-5 text-lg`}>Select a Ride - {distanceDuration?.distance.text}</Text>
+                <Text style={tw`text-center pb-5 text-lg`}>Select a Ride - {distanceDuration?.distance?.text}</Text>
             </View>
             <RideOptions />
         </SafeAreaView>

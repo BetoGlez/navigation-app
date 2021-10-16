@@ -22,11 +22,11 @@ export interface IRideOption {
 };
 
 export interface IDistanceDurationData {
-    distance: {
+    distance?: {
         text: string;
         value: number;
     };
-    duration: {
+    duration?: {
         text: string;
         value: number;
     };
