@@ -4,7 +4,7 @@ import { setDestinationActionCreator, setOriginActionCreator } from "../../store
 
 export const useTrip = () => {
     const dispatch = useAppDispatch();
-    const {origin, destination} = useAppSelector(state => state.tripData);
+    const {origin, destination, distanceDuration} = useAppSelector(state => state.tripData);
 
     const setTripOrigin = (place: IPlace) => {
         dispatch(setOriginActionCreator(place));
@@ -15,5 +15,5 @@ export const useTrip = () => {
         dispatch(setDestinationActionCreator(place));
     };
 
-    return { origin, destination, setTripOrigin, setTripDestination };
+    return { origin, destination, distanceDuration, setTripOrigin, setTripDestination };
 };

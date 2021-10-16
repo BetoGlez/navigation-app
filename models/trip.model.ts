@@ -20,3 +20,14 @@ export interface IRideOption {
     costMultiplier: number;
     image: ImageSourcePropType;
 };
+
+export interface IDistanceDurationData {
+    distance: {
+        text: string;
+        value: number;
+    };
+    duration: {
+        text: string;
+        value: number;
+    };
+};

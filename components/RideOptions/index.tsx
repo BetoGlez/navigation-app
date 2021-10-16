@@ -1,20 +1,28 @@
-import React, { useState } from "react";
-import { FlatList } from "react-native";
+import React from "react";
+import { FlatList, TouchableOpacity, View, Text } from "react-native";
+import tw from "tailwind-react-native-classnames";
 
-import { RIDE_OPTIONS } from "./RideOptions";
+import { RIDE_OPTIONS, useRideOptions } from "./RideOptions";
 import RideOption from "../RideOption";
-import { IRideOption } from "../../models/trip.model";
 
 const RideOptions = () => {
-    const [selectedRideOption, setSelectedRideOption] = useState<IRideOption>();
+    const {distanceDuration, selectedRideOption, setSelectedRideOption} = useRideOptions();
 
     return (
-        <FlatList
-            data={RIDE_OPTIONS}
-            keyExtractor={(item) => item.id}
-            renderItem={({item}) => <RideOption rideOption={item} selectedRideOptionId={selectedRideOption?.id}
-                setSelectedRideOption={setSelectedRideOption}/>}
-        />
+        <>
+            <FlatList
+                data={RIDE_OPTIONS}
+                keyExtractor={(item) => item.id}
+                renderItem={({item}) => <RideOption rideOption={item} selectedRideOptionId={selectedRideOption?.id}
+                    distanceDuration={distanceDuration} setSelectedRideOption={setSelectedRideOption}/>}
+            />
+            <View>
+                <TouchableOpacity style={tw`bg-black py-3 m-3 rounded ${!selectedRideOption ? "bg-gray-300" : ""}`}
+                    disabled={!selectedRideOption}>
+                    <Text style={tw`text-center text-white text-lg`}>Choose {selectedRideOption?.title}</Text>
+                </TouchableOpacity>
+            </View>
+        </>
     );
 };
 

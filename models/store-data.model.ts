@@ -1,7 +1,9 @@
+import { IDistanceDurationData } from "./trip.model";
+
 export interface ITripData {
     origin?: IPlace;
     destination?: IPlace;
-    travelTimeInfo?: string;
+    distanceDuration?: IDistanceDurationData;
 };
 
 export interface IPlace {

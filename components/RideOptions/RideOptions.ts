@@ -1,3 +1,6 @@
+import { useState } from "react";
+
+import { useTrip } from "../../hooks/trips/trips-hooks";
 import { IRideOption } from "../../models/trip.model";
 
 export const RIDE_OPTIONS: Array<IRideOption> = [
@@ -20,3 +23,10 @@ export const RIDE_OPTIONS: Array<IRideOption> = [
         image: require("../../assets/images/uberlux.png")
     }
 ];
+
+export const useRideOptions = () => {
+    const {distanceDuration} = useTrip();
+    const [selectedRideOption, setSelectedRideOption] = useState<IRideOption>();
+
+    return {distanceDuration, selectedRideOption, setSelectedRideOption};
+};
